@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/addcampground.css">
+    <script src="script.js"> </script>
+    <title>Add New Comment - YelpCamp </title>
+</head>
+
+<body>
+    <div class="acknowledgement" id="acknowledgement">
+        <p>This project was made by <a href="https://github.com/Colt">Colt Steele</a> and designed by <a
+                href="https://www.codewell.cc/">Codewell</a></p>
+        <div class="acknowledgement__close-button" id="acknowledgementCloseButton" onclick="closeAcknowledgement()">
+        </div>
+    </div>
+    <header>
+        <div class="header__image-container"><a class="header__home-link" href="index.html">Home</a></div>
+        <nav>
+            <div class="nav-button" id="navButton" onclick="openMenu()">
+                <div class="hamburger-img-container"></div>
+            </div>
+            <div class="nav-button-open" id="navButtonOpen" onclick="closeMenu()">
+                <div class="close-img-container"></div>
+            </div>
+        </nav>
+        <div class="nav-links" id="navLinks">
+            <div class="nav-links__logout" id="navLinksLogout"><a class="nav-links__login-btn" href="signin.html"
+                    target="_blank" onclick="login()">Login </a><a class="nav-links__create-btn"
+                    href="signup.html">Create an account </a></div>
+            <div class="nav-links__login" id="navLinksLogin"> <a class="nav-links__name-btn" href="#">Luis C.</a><a
+                    class="nav-links__logout-btn" href="#" onclick="logout()">Logout</a></div>
+        </div>
+    </header>
+    <main>
+        <h1 class="main__title">Add New Comment </h1>
+        <div class="input-description input">
+            <label for="description">Description</label>
+            <textarea id="description" name="description" rows="8"
+                placeholder="This was probably the best camp i’ve visited this past year, definitely recommend visiting any time soon."></textarea>
+        </div>
+        <button class="input-btn">Post Comment </button>
+    </main>
+    <footer>
+        <div class="footer__image-container"></div>
+    </footer>
+</body>
+
+</html>

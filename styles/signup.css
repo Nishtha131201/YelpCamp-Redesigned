@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Archivo", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    color: #595959;
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        display: grid;
+        grid-template-areas: "header opinion""main opinion";
+        grid-template-columns: 58% 42%;
+        grid-template-rows: 11.9% 88.1%;
+        height: 100vh;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 107px;
+    padding: 0 20px;
+    grid-area: header;
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        padding: 0 40px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    header {
+        padding: 0 150px;
+        align-items: center;
+        align-self: flex-start;
+    }
+}
+
+header .header__img-container {
+    width: 118px;
+    height: 27px;
+    background-image: url("../assets/Logo.svg");
+}
+
+header .header__link {
+    color: #595959;
+    text-decoration: none;
+}
+
+main {
+    padding: 0 20px;
+    width: 100%;
+    grid-area: main;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        padding: 0 40px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        padding: 110px 150px 0 150px;
+        align-self: start;
+    }
+}
+
+main .main__title {
+    font-size: 36px;
+    line-height: 39.17px;
+    color: #000;
+    margin-bottom: 36px;
+}
+
+@media screen and (min-width: 1440px) {
+    main .main__title {
+        margin-bottom: 12px;
+    }
+}
+
+main .input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+}
+
+@media screen and (min-width: 768px) {
+    main .input {
+        width: 534px;
+    }
+}
+
+main .input input {
+    margin-top: 16px;
+    padding: 18px 24px;
+    height: 63px;
+    background-color: #F7F7F7;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #ACACAC;
+    outline: none;
+}
+
+main .input-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    background-color: #000;
+    border-radius: 5px;
+    margin-top: 24px;
+    width: 100%;
+    height: 63px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    main .input-btn {
+        width: 534px;
+    }
+}
+
+main .already-an-user {
+    margin-top: 16px;
+}
+
+main .already-an-user a {
+    color: #009FE0;
+}
+
+.opinion {
+    margin-top: 40px;
+    padding: 50px 20px;
+    background-color: #F9F6F1;
+    width: 100%;
+    grid-area: opinion;
+}
+
+@media screen and (min-width: 768px) {
+    .opinion {
+        padding: 50px 40px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .opinion {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        padding: 0 150px;
+        margin-top: 0;
+    }
+}
+
+.opinion .opinion-text {
+    font-size: 24px;
+    line-height: 39px;
+    color: #000;
+}
+
+.opinion .opinion-user {
+    margin-top: 26px;
+    display: flex;
+    align-items: center;
+}
+
+.opinion .opinion-user .ou__img-container {
+    width: 40px;
+    height: 40px;
+    background-image: url("../assets/User Testimonial.svg");
+}
+
+.opinion .opinion-user .ou__nandp {
+    margin-left: 16px;
+}
+
+.opinion .opinion-user .ou__nandp p {
+    line-height: 26px;
+}
+
+.opinion .opinion-user .ou__nandp .ou__name {
+    font-weight: 700;
+    color: #000;
+}

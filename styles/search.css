@@ -1,0 +1,490 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Archivo", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    color: #595959;
+}
+
+.acknowledgement {
+    display: flex;
+    background-color: #000;
+    justify-content: center;
+    align-items: center;
+    grid-area: acknowledgement;
+}
+
+.acknowledgement p {
+    width: 312px;
+    color: #FFF;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px 36px 10px 0;
+}
+
+@media screen and (min-width: 768px) {
+    .acknowledgement p {
+        width: auto;
+    }
+}
+
+.acknowledgement p a {
+    color: #75D6FF;
+}
+
+.acknowledgement .acknowledgement__close-button {
+    min-width: 9px;
+    max-width: 9px;
+    height: 9px;
+    background-image: url("../assets/Close.svg");
+    background-size: cover;
+    cursor: pointer;
+}
+
+header {
+    position: relative;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    grid-area: header;
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        padding: 0 40px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    header {
+        padding: 0 150px;
+        height: 143px;
+    }
+}
+
+header .header__image-container {
+    width: 118px;
+    height: 27px;
+    background-image: url("../assets/Logo.svg");
+    background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 1440px) {
+    header .header__image-container {
+        width: 200px;
+    }
+}
+
+header .header__image-container .header__home-link {
+    display: none;
+    float: right;
+    color: #595959;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1440px) {
+    header .header__image-container .header__home-link {
+        display: block;
+    }
+}
+
+header nav .nav-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    background-color: #F9F6F1;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1440px) {
+    header nav .nav-button {
+        display: none;
+    }
+}
+
+header nav .nav-button .hamburger-img-container {
+    height: 20px;
+    width: 20px;
+    background-image: url("../assets/Hamburger Menu.svg");
+    background-size: cover;
+}
+
+header nav .nav-button-open {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    background-color: #F9F6F1;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+header nav .nav-button-open .close-img-container {
+    height: 13px;
+    width: 13px;
+    background-image: url("../assets/Close.svg");
+    background-size: cover;
+}
+
+header .nav-links {
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: #F9F6F1;
+    opacity: 0;
+    visibility: hidden;
+    transition: 600ms;
+}
+
+@media screen and (min-width: 1440px) {
+    header .nav-links {
+        width: auto;
+        position: relative;
+        top: 0;
+        opacity: 1;
+        background-color: transparent;
+        visibility: visible;
+        transition: none;
+    }
+}
+
+header .nav-links .nav-links__logout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
+}
+
+@media screen and (min-width: 1440px) {
+    header .nav-links .nav-links__logout {
+        flex-direction: row;
+        padding: 0;
+    }
+}
+
+header .nav-links .nav-links__logout a {
+    width: max-content;
+    color: #000;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    header .nav-links .nav-links__logout a {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    header .nav-links .nav-links__logout .nav-links__create-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        color: white;
+        text-decoration: none;
+        background-color: #000;
+        border-radius: 5px;
+        display: grid;
+        place-items: center;
+        width: 205px;
+        height: 63px;
+        margin-left: 20px;
+    }
+}
+
+header .nav-links .nav-links__login {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
+}
+
+@media screen and (min-width: 1440px) {
+    header .nav-links .nav-links__login {
+        flex-direction: row;
+        padding: 0;
+    }
+}
+
+header .nav-links .nav-links__login a {
+    width: max-content;
+    color: #000;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    header .nav-links .nav-links__login a {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    header .nav-links .nav-links__login .nav-links__logout-btn {
+        margin-left: 24px;
+    }
+}
+
+.search-box {
+    margin: 0 20px;
+    background-color: #F9F6F1;
+    padding: 0 36px;
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+    .search-box {
+        margin: 0 40px;
+        padding: 0 56px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .search-box {
+        margin: 0 150px;
+    }
+}
+
+.search-box .search-box__title {
+    font-size: 36px;
+    line-height: 39.17px;
+    margin-top: 36px;
+    color: #000;
+}
+
+@media screen and (min-width: 768px) {
+    .search-box .search-box__title {
+        margin-top: 68px;
+    }
+}
+
+.search-box .search-box__description {
+    margin-top: 8px;
+}
+
+@media screen and (min-width: 768px) {
+    .search-box .search-box__description {
+        width: 408px;
+    }
+}
+
+.search-box .search-input__container {
+    margin-top: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .search-box .search-input__container {
+        display: flex;
+    }
+}
+
+.search-box .search-input__container .input {
+    height: 63px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+    .search-box .search-input__container .input {
+        width: 255px;
+    }
+}
+
+.search-box .search-input__container .input .input__search-icon {
+    height: 16px;
+    width: 16px;
+    background-image: url("../assets/Search Icon.svg");
+    background-size: cover;
+    cursor: pointer;
+}
+
+.search-box .search-input__container .input .search-input {
+    width: 85%;
+    margin-left: 12px;
+    font-size: 18px;
+    border: none;
+}
+
+.search-box .search-input__container .input .search-input:focus {
+    outline: none;
+}
+
+.search-box .search-input__container .search-button {
+    height: 63px;
+    width: 100%;
+    margin-top: 16px;
+    background-color: #000;
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .search-box .search-input__container .search-button {
+        width: 109px;
+        margin-top: 0;
+        margin-left: 16px;
+    }
+}
+
+.search-box .search-box__link {
+    display: inline-block;
+    margin-top: 16px;
+    margin-bottom: 36px;
+    color: #595959;
+}
+
+@media screen and (min-width: 768px) {
+    .search-box .search-box__link {
+        margin-bottom: 68px;
+    }
+}
+
+.campground-card__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 40px 20px 0 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .campground-card__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 0 20px;
+        margin: 40px 40px 0 40px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .campground-card__container {
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 80px 150px 0 150px;
+        gap: 0 30px;
+    }
+}
+
+.campground-card__container .campground-card {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #DADADA;
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 1440px) {
+    .campground-card__container .campground-card {
+        margin-top: 30px;
+    }
+}
+
+.campground-card__container .campground-card .campground-card__img {
+    width: 100%;
+    height: 183px;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.campground-card__container .campground-card .mount-ulap {
+    background-image: url("../assets/Camp Images/Mount Ulap.jpg");
+}
+
+.campground-card__container .campground-card .calaguas-islands {
+    background-image: url("../assets/Camp Images/Calaguas Island.jpg");
+}
+
+.campground-card__container .campground-card .onay-beach {
+    background-image: url("../assets/Camp Images/Onay Beach.jpg");
+}
+
+.campground-card__container .campground-card .seven-sisters-waterfall {
+    background-image: url("../assets/Camp Images/Seven Sisters Waterfall.jpg");
+}
+
+.campground-card__container .campground-card .latik-riverside {
+    background-image: url("../assets/Camp Images/Latik Riverside.jpg");
+}
+
+.campground-card__container .campground-card .buloy-springs {
+    background-image: url("../assets/Camp Images/Buloy Springs.jpg");
+}
+
+.campground-card__container .campground-card .campground-card__title {
+    margin-top: 16px;
+    font-size: 18px;
+    line-height: 19.58px;
+    color: #000;
+}
+
+.campground-card__container .campground-card .campground-card__description {
+    margin-top: 9px;
+}
+
+.campground-card__container .campground-card .campground-card__button {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    border: 1px solid #DADADA;
+    border-radius: 5px;
+    font-weight: 700;
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+footer {
+    height: 187px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    grid-area: footer;
+}
+
+@media screen and (min-width: 768px) {
+    footer {
+        padding: 40px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    footer {
+        padding: 0 150px;
+    }
+}
+
+footer .footer__image-container {
+    width: 118px;
+    height: 27px;
+    background-image: url("../assets/Logo.svg");
+    background-size: cover;
+}
+
+/*# sourceMappingURL=search.css.map */
